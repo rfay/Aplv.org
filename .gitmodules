@@ -1,0 +1,198 @@
+[submodule "sites/all/modules/admin_menu"]
+	path = sites/all/modules/admin_menu
+	url = git://git.drupal.org/project/admin_menu.git
+[submodule "sites/all/modules/adminrole"]
+	path = sites/all/modules/adminrole
+	url = git://git.drupal.org/project/adminrole.git
+[submodule "sites/all/modules/auto_nodetitle"]
+	path = sites/all/modules/auto_nodetitle
+	url = git://git.drupal.org/project/auto_nodetitle.git
+[submodule "sites/all/modules/backup_migrate"]
+	path = sites/all/modules/backup_migrate
+	url = git://git.drupal.org/project/backup_migrate.git
+[submodule "sites/all/modules/better_formats"]
+	path = sites/all/modules/better_formats
+	url = git://git.drupal.org/project/better_formats.git
+[submodule "sites/all/modules/caption_filter"]
+	path = sites/all/modules/caption_filter
+	url = git://git.drupal.org/project/caption_filter.git
+[submodule "sites/all/modules/cck"]
+	path = sites/all/modules/cck
+	url = git://git.drupal.org/project/cck.git
+[submodule "sites/all/modules/codefilter"]
+	path = sites/all/modules/codefilter
+	url = git://git.drupal.org/project/codefilter.git
+[submodule "sites/all/modules/colorbox"]
+	path = sites/all/modules/colorbox
+	url = git://git.drupal.org/project/colorbox.git
+[submodule "sites/all/modules/comment_notify"]
+	path = sites/all/modules/comment_notify
+	url = git://git.drupal.org/project/comment_notify.git
+[submodule "sites/all/modules/contact_forms"]
+	path = sites/all/modules/contact_forms
+	url = git://git.drupal.org/project/contact_forms.git
+[submodule "sites/all/modules/context"]
+	path = sites/all/modules/context
+	url = git://git.drupal.org/project/context.git
+[submodule "sites/all/modules/css_injector"]
+	path = sites/all/modules/css_injector
+	url = git://git.drupal.org/project/css_injector.git
+[submodule "sites/all/modules/ctools"]
+	path = sites/all/modules/ctools
+	url = git://git.drupal.org/project/ctools.git
+[submodule "sites/all/modules/date"]
+	path = sites/all/modules/date
+	url = git://git.drupal.org/project/date.git
+[submodule "sites/all/modules/devel"]
+	path = sites/all/modules/devel
+	url = git://git.drupal.org/project/devel.git
+[submodule "sites/all/modules/diff"]
+	path = sites/all/modules/diff
+	url = git://git.drupal.org/project/diff.git
+[submodule "sites/all/modules/ed_readmore"]
+	path = sites/all/modules/ed_readmore
+	url = git://git.drupal.org/project/ed_readmore.git
+[submodule "sites/all/modules/environment_indicator"]
+	path = sites/all/modules/environment_indicator
+	url = git://git.drupal.org/project/environment_indicator.git
+[submodule "sites/all/modules/features"]
+	path = sites/all/modules/features
+	url = git://git.drupal.org/project/features.git
+[submodule "sites/all/modules/filefield"]
+	path = sites/all/modules/filefield
+	url = git://git.drupal.org/project/filefield.git
+[submodule "sites/all/modules/filefield_sources"]
+	path = sites/all/modules/filefield_sources
+	url = git://git.drupal.org/project/filefield_sources.git
+[submodule "sites/all/modules/flag"]
+	path = sites/all/modules/flag
+	url = git://git.drupal.org/project/flag.git
+[submodule "sites/all/modules/flickr"]
+	path = sites/all/modules/flickr
+	url = git://git.drupal.org/project/flickr.git
+[submodule "sites/all/modules/flickrapi"]
+	path = sites/all/modules/flickrapi
+	url = git://git.drupal.org/project/flickrapi.git
+[submodule "sites/all/modules/follow"]
+	path = sites/all/modules/follow
+	url = git://git.drupal.org/project/follow.git
+[submodule "sites/all/modules/fontyourface"]
+	path = sites/all/modules/fontyourface
+	url = git://git.drupal.org/project/fontyourface.git
+[submodule "sites/all/modules/git_deploy"]
+	path = sites/all/modules/git_deploy
+	url = git://git.drupal.org/project/git_deploy.git
+[submodule "sites/all/modules/gmap"]
+	path = sites/all/modules/gmap
+	url = git://git.drupal.org/project/gmap.git
+[submodule "sites/all/modules/i18n"]
+	path = sites/all/modules/i18n
+	url = git://git.drupal.org/project/i18n.git
+[submodule "sites/all/modules/image"]
+	path = sites/all/modules/image
+	url = git://git.drupal.org/project/image.git
+[submodule "sites/all/modules/image_caption"]
+	path = sites/all/modules/image_caption
+	url = git://git.drupal.org/project/image_caption.git
+[submodule "sites/all/modules/imageapi"]
+	path = sites/all/modules/imageapi
+	url = git://git.drupal.org/project/imageapi.git
+[submodule "sites/all/modules/imagecache"]
+	path = sites/all/modules/imagecache
+	url = git://git.drupal.org/project/imagecache.git
+[submodule "sites/all/modules/imagefield"]
+	path = sites/all/modules/imagefield
+	url = git://git.drupal.org/project/imagefield.git
+[submodule "sites/all/modules/imce"]
+	path = sites/all/modules/imce
+	url = git://git.drupal.org/project/imce.git
+[submodule "sites/all/modules/imce_wysiwyg"]
+	path = sites/all/modules/imce_wysiwyg
+	url = git://git.drupal.org/project/imce_wysiwyg.git
+[submodule "sites/all/modules/insert"]
+	path = sites/all/modules/insert
+	url = git://git.drupal.org/project/insert.git
+[submodule "sites/all/modules/job_scheduler"]
+	path = sites/all/modules/job_scheduler
+	url = git://git.drupal.org/project/job_scheduler.git
+[submodule "sites/all/modules/jquery_ui"]
+	path = sites/all/modules/jquery_ui
+	url = git://git.drupal.org/project/jquery_ui.git
+[submodule "sites/all/modules/jquery_update"]
+	path = sites/all/modules/jquery_update
+	url = git://git.drupal.org/project/jquery_update.git
+[submodule "sites/all/modules/l10n_client"]
+	path = sites/all/modules/l10n_client
+	url = git://git.drupal.org/project/l10n_client.git
+[submodule "sites/all/modules/libraries"]
+	path = sites/all/modules/libraries
+	url = git://git.drupal.org/project/libraries.git
+[submodule "sites/all/modules/location"]
+	path = sites/all/modules/location
+	url = git://git.drupal.org/project/location.git
+[submodule "sites/all/modules/markdown"]
+	path = sites/all/modules/markdown
+	url = git://git.drupal.org/project/markdown.git
+[submodule "sites/all/modules/menu_block"]
+	path = sites/all/modules/menu_block
+	url = git://git.drupal.org/project/menu_block.git
+[submodule "sites/all/modules/migrate"]
+	path = sites/all/modules/migrate
+	url = git://git.drupal.org/project/migrate.git
+[submodule "sites/all/modules/module_filter"]
+	path = sites/all/modules/module_filter
+	url = git://git.drupal.org/project/module_filter.git
+[submodule "sites/all/modules/nodeformsettings"]
+	path = sites/all/modules/nodeformsettings
+	url = git://git.drupal.org/project/nodeformsettings.git
+[submodule "sites/all/modules/panels"]
+	path = sites/all/modules/panels
+	url = git://git.drupal.org/project/panels.git
+[submodule "sites/all/modules/quicktabs"]
+	path = sites/all/modules/quicktabs
+	url = git://git.drupal.org/project/quicktabs.git
+[submodule "sites/all/modules/reroute_email"]
+	path = sites/all/modules/reroute_email
+	url = git://git.drupal.org/project/reroute_email.git
+[submodule "sites/all/modules/rules"]
+	path = sites/all/modules/rules
+	url = git://git.drupal.org/project/rules.git
+[submodule "sites/all/modules/strongarm"]
+	path = sites/all/modules/strongarm
+	url = git://git.drupal.org/project/strongarm.git
+[submodule "sites/all/modules/tac_lite"]
+	path = sites/all/modules/tac_lite
+	url = git://git.drupal.org/project/tac_lite.git
+[submodule "sites/all/modules/token"]
+	path = sites/all/modules/token
+	url = git://git.drupal.org/project/token.git
+[submodule "sites/all/modules/translatableregions"]
+	path = sites/all/modules/translatableregions
+	url = git://git.drupal.org/project/translatableregions.git
+[submodule "sites/all/modules/upgrade_status"]
+	path = sites/all/modules/upgrade_status
+	url = git://git.drupal.org/project/upgrade_status.git
+[submodule "sites/all/modules/vertical_tabs"]
+	path = sites/all/modules/vertical_tabs
+	url = git://git.drupal.org/project/vertical_tabs.git
+[submodule "sites/all/modules/views"]
+	path = sites/all/modules/views
+	url = git://git.drupal.org/project/views.git
+[submodule "sites/all/modules/views_bulk_operations"]
+	path = sites/all/modules/views_bulk_operations
+	url = git://git.drupal.org/project/views_bulk_operations.git
+[submodule "sites/all/modules/webform"]
+	path = sites/all/modules/webform
+	url = git://git.drupal.org/project/webform.git
+[submodule "sites/all/modules/wysiwyg"]
+	path = sites/all/modules/wysiwyg
+	url = git://git.drupal.org/project/wysiwyg.git
+[submodule "sites/all/libraries/colorbox"]
+	path = sites/all/libraries/colorbox
+	url = git://git.drupal.org/project/colorbox.git
+[submodule "sites/all/libraries/glip"]
+	path = sites/all/libraries/glip
+	url = git://git.drupal.org/project/glip.git
+[submodule "sites/all/libraries/jquery.cycle"]
+	path = sites/all/libraries/jquery.cycle
+	url = git://git.drupal.org/project/jquery.cycle.git
