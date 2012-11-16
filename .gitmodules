@@ -202,3 +202,9 @@
 [submodule "sites/all/modules/entity"]
 	path = sites/all/modules/entity
 	url = git://git.drupal.org/project/entity.git
+[submodule "sites/all/modules/variable"]
+	path = sites/all/modules/variable
+	url = git://git.drupal.org/project/variable.git
+[submodule "sites/all/modules/read_more"]
+	path = sites/all/modules/read_more
+	url = git://git.drupal.org/project/read_more.git
