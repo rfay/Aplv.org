@@ -208,3 +208,6 @@
 [submodule "sites/all/modules/read_more"]
 	path = sites/all/modules/read_more
 	url = git://git.drupal.org/project/read_more.git
+[submodule "sites/all/modules/languageicons"]
+	path = sites/all/modules/languageicons
+	url = git://git.drupal.org/project/languageicons.git
