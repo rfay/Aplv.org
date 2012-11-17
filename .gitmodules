@@ -190,12 +190,9 @@
 [submodule "sites/all/libraries/colorbox"]
 	path = sites/all/libraries/colorbox
 	url = git://github.com/jackmoore/colorbox.git
-[submodule "sites/all/libraries/glip"]
-	path = sites/all/libraries/glip
-	url = git://git.drupal.org/project/glip.git
 [submodule "sites/all/libraries/jquery.cycle"]
 	path = sites/all/libraries/jquery.cycle
-	url = git://git.drupal.org/project/jquery.cycle.git
+	url = git://github.com/malsup/cycle.git
 [submodule "sites/all/modules/references"]
 	path = sites/all/modules/references
 	url = git://git.drupal.org/project/references.git
