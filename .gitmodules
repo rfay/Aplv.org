@@ -189,7 +189,7 @@
 	url = git://git.drupal.org/project/wysiwyg.git
 [submodule "sites/all/libraries/colorbox"]
 	path = sites/all/libraries/colorbox
-	url = git://git.drupal.org/project/colorbox.git
+	url = git://github.com/jackmoore/colorbox.git
 [submodule "sites/all/libraries/glip"]
 	path = sites/all/libraries/glip
 	url = git://git.drupal.org/project/glip.git
