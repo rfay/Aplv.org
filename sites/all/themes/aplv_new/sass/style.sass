@@ -1,0 +1,66 @@
+@import "susy"
+@import "compass/css3"
+// IE Compatibility
+
+$legacy-support-for-ie: true
+
+$total-columns  : 12             
+$column-width   : 68px           
+$gutter-width   : 10px           
+$grid-padding   : 0px
+
+// Colors
+
+$body-base-font-color: #555
+$headline-color: #EA9C44
+
+// Font Properties
+$font-size-base: 12px
+$font-size-h1: 2.3em
+$font-size-h2: 1.9em
+$line-height-base: 1.5
+
+$font-family-copy: verdana, arial, helvetica, sans-serif
+$font-family-headlines: "PTSansNarrowRegular","trebuchet ms", arial, helvetica, sans-serif
+
+$font-base-properties: #{$font-size-base}/#{$line-height-base} $font-family-copy 
+
+// Start CSS
+
+/*--------------------------------*/
+/*---------- Reset Styles --------*/
+/*--------------------------------*/
+html, body
+  padding: 0 
+  margin: 0
+ 
+body
+  line-height: 1
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+/*--------------------------------*/
+/*------------ Layout ------------*/
+/*--------------------------------*/
+#page 
+  +container
+
+/*--------------------------------*/
+/*---- Fonts, Micro-Elements -----*/
+/*--------------------------------*/
+body
+  font: $font-base-properties
+  color: $body-base-font-color
+
+h1,h2,h3,h4,h5,h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a 
+  font-family: $font-family-headlines
+  color: $headline-color
+
+h1
+  font-size: $font-size-h1
+
+h2 
+  font-size: $font-size-h2

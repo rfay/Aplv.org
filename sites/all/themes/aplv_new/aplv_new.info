@@ -1,3 +1,6 @@
 name = APLV New
 description = The new theme for the Redesign of APLV
 core = 7.x
+
+stylesheets[all][] = font_face/pt_sans/stylesheet.css
+stylesheets[all][] = css/style.css
