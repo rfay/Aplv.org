@@ -13,15 +13,19 @@ $grid-padding   : 0px
 
 $body-base-font-color: #555
 $headline-color: #EA9C44
+$secondary-color: #4882B5
+$middle-grey: #aaa
 
 // Font Properties
-$font-size-base: 12px
-$font-size-h1: 2.3em
-$font-size-h2: 1.9em
+$font-size-base: 13px
+$font-letter-spacing-base: 0.01em
+$font-size-h1: 2.2em
+$font-size-h2: 1.8em
 $line-height-base: 1.5
 
-$font-family-copy: verdana, arial, helvetica, sans-serif
+$font-family-copy: "OpenSansRegular",verdana, arial, helvetica, sans-serif
 $font-family-headlines: "PTSansNarrowRegular","trebuchet ms", arial, helvetica, sans-serif
+$font-family-light: "PTSansNarrowRegular","trebuchet ms", arial, helvetica, sans-serif
 
 $font-base-properties: #{$font-size-base}/#{$line-height-base} $font-family-copy 
 
@@ -36,6 +40,7 @@ html, body
  
 body
   line-height: 1
+  letter-spacing: $font-letter-spacing-base
 
 table
   border-collapse: collapse
@@ -47,6 +52,28 @@ table
 #page 
   +container
 
+#header 
+  padding-top: 20px
+  margin-bottom: 20px
+
+#site-name
+  font-family: $font-family-headlines
+  font-size: 3em
+  float: left
+  margin-right: 18px
+  a
+    color: $middle-grey
+
+#logo
+  float: left
+  padding-top: 5px
+  img
+    width: 47px
+
+#site-slogan 
+  float: right
+  width: 25%
+
 /*--------------------------------*/
 /*---- Fonts, Micro-Elements -----*/
 /*--------------------------------*/
@@ -55,7 +82,7 @@ body
   color: $body-base-font-color
 
 h1,h2,h3,h4,h5,h6,
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, 
   font-family: $font-family-headlines
   color: $headline-color
 
@@ -64,3 +91,13 @@ h1
 
 h2 
   font-size: $font-size-h2
+
+/** Links, Taxonomy etc **/
+a
+  color: $secondary-color
+  text-decoration: none
+  &:hover, &:active
+    text-decoration: underline
+
+
+
