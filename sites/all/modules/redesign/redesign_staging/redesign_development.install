@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file redesign_staging.install
+ *
+ * Add hook_enable(), etc.
+ *
+ */
+
+/**
+ * Implements hook_enable()
+ */
+function redesign_staging_enable() {
+  $sql = "UPDATE languages SET domain=REPLACE(domain, 'aplv.org', 'aplv.thefays.us')";
+  db_query($sql);
+  drupal_set_message('Set domain to aplv.thefays.us instead of aplv.org');
+}

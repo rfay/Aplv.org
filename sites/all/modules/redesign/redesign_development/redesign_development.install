@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file redesign_development.install
+ *
+ * Add hook_enable(), etc.
+ *
+ */
+
+/**
+ * Implements hook_enable()
+ */
+function redesign_development_enable() {
+  $sql = "UPDATE languages SET domain=REPLACE(domain, 'aplv.org', 'aplv.dev')";
+  db_query($sql);
+  drupal_set_message('Set domain to aplv.dev instead of aplv.org');
+}

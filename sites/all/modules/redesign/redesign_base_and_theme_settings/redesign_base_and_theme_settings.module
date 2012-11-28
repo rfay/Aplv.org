@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Redesign Base and Theme Settings feature.
+ */
+
+include_once 'redesign_base_and_theme_settings.features.inc';
