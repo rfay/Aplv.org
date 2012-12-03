@@ -3,8 +3,9 @@ description = Development features (renamed domains, email, etc.)
 core = 7.x
 package = Redesign
 dependencies[] = reroute_email
-dependencies[] = strongarm
 dependencies[] = environment_indicator
+dependencies[] = redesign_base_and_theme_settings
+
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = language_negotiation_language
