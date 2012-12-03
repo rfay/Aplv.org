@@ -211,3 +211,6 @@
 [submodule "sites/all/modules/nodeblock"]
 	path = sites/all/modules/nodeblock
 	url = git://git.drupal.org/project/nodeblock.git
+[submodule "sites/all/modules/admin_views"]
+	path = sites/all/modules/admin_views
+	url = git://git.drupal.org/project/admin_views.git
