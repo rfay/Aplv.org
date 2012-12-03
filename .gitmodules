@@ -220,3 +220,6 @@
 [submodule "sites/all/modules/views_slideshow"]
 	path = sites/all/modules/views_slideshow
 	url = git://git.drupal.org/project/views_slideshow.git
+[submodule "sites/all/modules/admin_views"]
+	path = sites/all/modules/admin_views
+	url = git://git.drupal.org/project/admin_views.git
