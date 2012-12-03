@@ -32,7 +32,7 @@ table {
   padding-left: 0px;
   padding-right: 0px;
 }
-/* line 38, ../../../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #page:after {
   content: "";
   display: table;
@@ -58,54 +58,55 @@ table {
 }
 
 /* line 67, ../sass/style.sass */
-#logo {
+a#logo {
   float: left;
-  padding-top: 5px;
+  padding-top: 7px;
 }
 /* line 70, ../sass/style.sass */
-#logo img {
-  width: 47px;
+a#logo img {
+  width: 52px;
 }
 
 /* line 73, ../sass/style.sass */
 #site-slogan {
   float: right;
   width: 25%;
+  margin-top: 10px;
 }
 
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 80, ../sass/style.sass */
+/* line 81, ../sass/style.sass */
 body {
   font: 13px/1.5 "OpenSansRegular", verdana, arial, helvetica, sans-serif;
   color: #555555;
 }
 
-/* line 84, ../sass/style.sass */
+/* line 85, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
   color: #ea9c44;
 }
 
-/* line 89, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 92, ../sass/style.sass */
+/* line 93, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 96, ../sass/style.sass */
+/* line 97, ../sass/style.sass */
 a {
   color: #4882b5;
   text-decoration: none;
 }
-/* line 99, ../sass/style.sass */
+/* line 100, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }

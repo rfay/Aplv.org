@@ -77,13 +77,8 @@
 
     <div id="header"><div class="section clearfix">
 
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-
-      <?php if ($site_name || $site_slogan): ?>
+      
+        <?php if ($site_name || $site_slogan): ?>
         <div id="name-and-slogan">
           <?php if ($site_name): ?>
             <?php if ($title): ?>
@@ -102,6 +97,10 @@
           <?php endif; ?>
         </div> <!-- /#name-and-slogan -->
       <?php endif; ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+          <img src="<?php print url(path_to_theme() . '/images/logo-aplv.png'); ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+
 
       <?php print render($page['header']); ?>
 
@@ -110,13 +109,12 @@
     <?php if ($main_menu || $secondary_menu): ?>
       <div id="navigation"><div class="section">
         <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-      </div></div> <!-- /.section, /#navigation -->
+            </div></div> <!-- /.section, /#navigation -->
     <?php endif; ?>
 
-    <?php if ($breadcrumb): ?>
+    <!--<?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+    <?php endif; ?>-->
 
     <?php print $messages; ?>
 
