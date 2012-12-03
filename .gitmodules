@@ -208,3 +208,12 @@
 [submodule "sites/all/modules/languageicons"]
 	path = sites/all/modules/languageicons
 	url = git://git.drupal.org/project/languageicons.git
+[submodule "sites/all/modules/block_class"]
+	path = sites/all/modules/block_class
+	url = git://git.drupal.org/project/block_class.git
+[submodule "sites/all/modules/nodeblock"]
+	path = sites/all/modules/nodeblock
+	url = git://git.drupal.org/project/nodeblock.git
+[submodule "sites/all/modules/features_extra"]
+	path = sites/all/modules/features_extra
+	url = git://git.drupal.org/project/features_extra.git

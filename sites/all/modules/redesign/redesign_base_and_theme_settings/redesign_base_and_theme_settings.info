@@ -1,0 +1,12 @@
+name = Redesign Base and Theme Settings
+description = Basic variables and theme settings (and dependencies)
+core = 7.x
+package = Redesign
+dependencies[] = block_class
+dependencies[] = fe_block
+dependencies[] = nodeblock
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = theme_aplv_new_settings
+features[variable][] = theme_default
