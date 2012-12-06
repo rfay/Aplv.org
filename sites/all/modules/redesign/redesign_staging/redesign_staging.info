@@ -1,10 +1,12 @@
-name = Redesign Development
-description = Development features (renamed domains, email, etc.)
+name = Redesign Staging
+description = Staging site features (renamed domains, email, etc.)
 core = 7.x
 package = Redesign
-dependencies[] = reroute_email
-dependencies[] = strongarm
+php = 5.2.4
 dependencies[] = environment_indicator
+dependencies[] = reroute_email
+dependencies[] = redesign_base_and_theme_settings
+
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = language_negotiation_language

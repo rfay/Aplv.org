@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file redesign_base_and_theme_settings.install
+ *
+ * Add hook_enable(), etc.
+ *
+ */
+
+/**
+ * Implements hook_enable()
+ */
+function redesign_base_and_theme_settings_enable() {
+  $sql = "UPDATE system SET status=1 WHERE name='aplv_new'";
+  db_query($sql);
+  drupal_set_message('Set aplv_new as an enabled theme');
+}
