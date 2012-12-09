@@ -13,6 +13,20 @@ function redesign_base_and_theme_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_name';
+  $strongarm->value = 'Agua para la Vida';
+  $export['site_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_slogan';
+  $strongarm->value = 'Providing Potable Water and Sanitation to Rural Nicaragua';
+  $export['site_slogan'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'theme_aplv_new_settings';
   $strongarm->value = array(
     'toggle_logo' => 1,

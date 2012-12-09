@@ -27,12 +27,12 @@ table {
   *zoom: 1;
   max-width: 926px;
   _width: 926px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 25px;
   padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 38, ../../../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #page:after {
   content: "";
   display: table;
@@ -89,25 +89,26 @@ h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
   color: #ea9c44;
+  font-weight: normal;
 }
 
-/* line 91, ../sass/style.sass */
+/* line 92, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 94, ../sass/style.sass */
+/* line 95, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 98, ../sass/style.sass */
+/* line 99, ../sass/style.sass */
 a {
   color: #4882b5;
   text-decoration: none;
 }
-/* line 101, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
