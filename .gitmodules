@@ -223,3 +223,9 @@
 [submodule "sites/all/modules/admin_views"]
 	path = sites/all/modules/admin_views
 	url = git://git.drupal.org/project/admin_views.git
+[submodule "context_condition_theme"]
+	path = context_condition_theme
+	url = git://git.drupal.org/project/context_condition_theme.git
+[submodule "sites/all/modules/context_condition_theme"]
+	path = sites/all/modules/context_condition_theme
+	url = git://git.drupal.org/project/context_condition_theme.git
