@@ -49,25 +49,26 @@ table {
 #site-name {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
   font-size: 3em;
+  font-weight: normal !important;
   float: left;
   margin-right: 18px;
 }
-/* line 64, ../sass/style.sass */
+/* line 65, ../sass/style.sass */
 #site-name a {
   color: #aaaaaa;
 }
 
-/* line 67, ../sass/style.sass */
+/* line 68, ../sass/style.sass */
 a#logo {
   float: left;
   padding-top: 7px;
 }
-/* line 70, ../sass/style.sass */
+/* line 71, ../sass/style.sass */
 a#logo img {
   width: 52px;
 }
 
-/* line 73, ../sass/style.sass */
+/* line 74, ../sass/style.sass */
 #site-slogan {
   float: right;
   width: 25%;
@@ -78,13 +79,13 @@ a#logo img {
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 82, ../sass/style.sass */
+/* line 83, ../sass/style.sass */
 body {
   font: 13px/1.5 "OpenSansRegular", verdana, arial, helvetica, sans-serif;
   color: #555555;
 }
 
-/* line 86, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -92,23 +93,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: normal;
 }
 
-/* line 92, ../sass/style.sass */
+/* line 93, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 95, ../sass/style.sass */
+/* line 96, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 99, ../sass/style.sass */
+/* line 100, ../sass/style.sass */
 a {
   color: #4882b5;
   text-decoration: none;
 }
-/* line 102, ../sass/style.sass */
+/* line 103, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }

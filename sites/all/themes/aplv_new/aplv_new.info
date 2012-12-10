@@ -1,7 +1,18 @@
 name = APLV New
 description = The new theme for the Redesign of APLV
 core = 7.x
+engine = phptemplate
 
 stylesheets[all][] = font_face/pt_sans/stylesheet.css
 stylesheets[all][] = font_face/open_sans/stylesheet-sans.css
 stylesheets[all][] = css/style.css
+
+regions[header] = Header
+regions[help] = Help
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[content_bottom_upper] = Content bottom upper
+regions[content_bottom_lower] = Content bottom lower
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[footer] = Footer

@@ -87,9 +87,9 @@
         <div id="name-and-slogan">
           <?php if ($site_name): ?>
             <?php if ($title): ?>
-              <div id="site-name"><strong>
+              <div id="site-name">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </strong></div>
+              </div>
               <div id="logo">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
                   <img src="<?php print url(path_to_theme() . '/images/logo-aplv.png'); ?>" alt="<?php print t('Home'); ?>" />
@@ -137,6 +137,8 @@
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
+        <?php if ($page['content_bottom_upper']): ?><div id="content-bottom-upper"><?php print render($page['content_bottom_upper']); ?></div><?php endif; ?>
+        <?php if ($page['content_bottom_lower']): ?><div id="content-bottom-lower"><?php print render($page['content_bottom_lower']); ?></div><?php endif; ?>
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 
