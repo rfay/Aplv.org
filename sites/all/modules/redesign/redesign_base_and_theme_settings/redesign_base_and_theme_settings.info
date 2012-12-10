@@ -10,6 +10,7 @@ dependencies[] = fe_block
 dependencies[] = nodeblock
 dependencies[] = redesign_block
 dependencies[] = strongarm
+dependencies[] = media
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = site_name

@@ -226,3 +226,9 @@
 [submodule "sites/all/modules/context_condition_theme"]
 	path = sites/all/modules/context_condition_theme
 	url = git://git.drupal.org/project/context_condition_theme.git
+[submodule "sites/all/modules/media"]
+	path = sites/all/modules/media
+	url = git://git.drupal.org/project/media.git
+[submodule "sites/all/modules/file_entity"]
+	path = sites/all/modules/file_entity
+	url = git://git.drupal.org/project/file_entity.git
