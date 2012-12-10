@@ -70,28 +70,28 @@ function redesign_block_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'nodeblock-214' => array(
-          'module' => 'nodeblock',
-          'delta' => '214',
-          'region' => 'content_bottom_lower',
-          'weight' => '-10',
-        ),
         'nodeblock-213' => array(
           'module' => 'nodeblock',
           'delta' => '213',
-          'region' => 'content_bottom_lower',
+          'region' => 'content_bottom_upper',
+          'weight' => '-10',
+        ),
+        'nodeblock-214' => array(
+          'module' => 'nodeblock',
+          'delta' => '214',
+          'region' => 'content_bottom_upper',
           'weight' => '-10',
         ),
         'nodeblock-211' => array(
           'module' => 'nodeblock',
           'delta' => '211',
-          'region' => 'sidebar_first',
+          'region' => 'content_bottom_lower',
           'weight' => '-10',
         ),
         'nodeblock-212' => array(
           'module' => 'nodeblock',
           'delta' => '212',
-          'region' => 'sidebar_first',
+          'region' => 'content_bottom_lower',
           'weight' => '-10',
         ),
       ),

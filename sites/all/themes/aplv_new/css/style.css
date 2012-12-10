@@ -91,25 +91,51 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
   color: #ea9c44;
   font-weight: normal;
+  line-height: 1.2;
+  margin: 0.5em 0;
 }
 
-/* line 93, ../sass/style.sass */
+/* line 95, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 96, ../sass/style.sass */
+/* line 98, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 100, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 a {
   color: #4882b5;
   text-decoration: none;
 }
-/* line 103, ../sass/style.sass */
+/* line 105, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
+}
+
+/*-------------------------------- */
+/*Nodeblocks, Topic Overview Pages */
+/*-------------------------------- */
+/* line 112, ../sass/style.sass */
+.block-nodeblock {
+  float: left;
+  width: 46%;
+  margin-right: 4%;
+}
+/* line 116, ../sass/style.sass */
+.block-nodeblock.one-fourth {
+  width: 21%;
+}
+/* line 118, ../sass/style.sass */
+.block-nodeblock.one-third {
+  width: 29%;
+}
+
+/* line 124, ../sass/style.sass */
+#content-bottom-upper,
+#content-bottom-lower {
+  margin-right: -4%;
 }

@@ -119,9 +119,9 @@
       </div></div> <!-- /.section, /#navigation -->
     <?php endif; ?>
 
-    <?php if ($breadcrumb): ?>
+    <!--<?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+    <?php endif; ?>-->
 
     <?php print $messages; ?>
 
@@ -137,8 +137,8 @@
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
-        <?php if ($page['content_bottom_upper']): ?><div id="content-bottom-upper"><?php print render($page['content_bottom_upper']); ?></div><?php endif; ?>
-        <?php if ($page['content_bottom_lower']): ?><div id="content-bottom-lower"><?php print render($page['content_bottom_lower']); ?></div><?php endif; ?>
+        <?php if ($page['content_bottom_upper']): ?><div id="content-bottom-upper" class="clearfix"><?php print render($page['content_bottom_upper']); ?></div><?php endif; ?>
+        <?php if ($page['content_bottom_lower']): ?><div id="content-bottom-lower" class="clearfix"><?php print render($page['content_bottom_lower']); ?></div><?php endif; ?>
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 

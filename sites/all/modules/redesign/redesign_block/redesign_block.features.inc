@@ -31,14 +31,6 @@ function redesign_block_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'page' => array(
-      'name' => t('Página'),
-      'base' => 'node_content',
-      'description' => t('Usa este tipo para los demas artículos'),
-      'has_title' => '1',
-      'title_label' => t('Título'),
-      'help' => '',
-    ),
   );
   return $items;
 }
