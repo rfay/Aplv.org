@@ -124,17 +124,18 @@ a:hover, a:active {
   float: left;
   width: 46%;
   margin-right: 4%;
+  overflow: hidden;
 }
-/* line 116, ../sass/style.sass */
+/* line 117, ../sass/style.sass */
 .block-nodeblock.one-fourth {
   width: 21%;
 }
-/* line 118, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 .block-nodeblock.one-third {
   width: 29%;
 }
 
-/* line 124, ../sass/style.sass */
+/* line 125, ../sass/style.sass */
 #content-bottom-upper,
 #content-bottom-lower {
   margin-right: -4%;
