@@ -97,7 +97,11 @@ function redesign_block_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+      ),
       'display' => array(),
     ),
   );
