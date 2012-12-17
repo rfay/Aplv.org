@@ -1,19 +1,19 @@
 /*-------------------------------- */
 /*---------- Reset Styles -------- */
 /*-------------------------------- */
-/* line 37, ../sass/style.sass */
+/* line 40, ../sass/style.sass */
 html, body {
   padding: 0;
   margin: 0;
 }
 
-/* line 41, ../sass/style.sass */
+/* line 44, ../sass/style.sass */
 body {
   line-height: 1;
   letter-spacing: 0.01em;
 }
 
-/* line 45, ../sass/style.sass */
+/* line 48, ../sass/style.sass */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -22,7 +22,7 @@ table {
 /*-------------------------------- */
 /*------------ Layout ------------ */
 /*-------------------------------- */
-/* line 52, ../sass/style.sass */
+/* line 55, ../sass/style.sass */
 #page {
   *zoom: 1;
   max-width: 926px;
@@ -39,13 +39,19 @@ table {
   clear: both;
 }
 
-/* line 55, ../sass/style.sass */
+/* line 58, ../sass/style.sass */
 #header {
   padding-top: 20px;
   margin-bottom: 20px;
 }
 
-/* line 59, ../sass/style.sass */
+/* line 62, ../sass/style.sass */
+#name-and-slogan {
+  float: left;
+  width: 335px;
+}
+
+/* line 66, ../sass/style.sass */
 #site-name {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
   font-size: 3em;
@@ -53,22 +59,22 @@ table {
   float: left;
   margin-right: 18px;
 }
-/* line 65, ../sass/style.sass */
+/* line 72, ../sass/style.sass */
 #site-name a {
   color: #aaaaaa;
 }
 
-/* line 68, ../sass/style.sass */
+/* line 75, ../sass/style.sass */
 a#logo {
   float: left;
   padding-top: 7px;
 }
-/* line 71, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 a#logo img {
   width: 52px;
 }
 
-/* line 74, ../sass/style.sass */
+/* line 81, ../sass/style.sass */
 #site-slogan {
   float: right;
   width: 25%;
@@ -76,16 +82,67 @@ a#logo img {
   text-align: right;
 }
 
+/* line 88, ../sass/style.sass */
+#header .block-superfish {
+  float: right;
+  padding-top: 25px;
+}
+/* line 92, ../sass/style.sass */
+#header .block-superfish ul li {
+  margin: 0 9px;
+}
+/* line 94, ../sass/style.sass */
+#header .block-superfish ul li.last {
+  margin-right: 0;
+}
+/* line 96, ../sass/style.sass */
+#header .block-superfish ul li.first {
+  margin-left: 0;
+}
+/* line 98, ../sass/style.sass */
+#header .block-superfish ul li a {
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 1.1em;
+}
+/* line 102, ../sass/style.sass */
+#header .block-superfish ul ul {
+  background: white;
+  border: 1px solid #c5c5c5;
+  top: 25px;
+  left: -8px;
+  padding: 0;
+}
+/* line 108, ../sass/style.sass */
+#header .block-superfish ul ul li {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #c5c5c5;
+}
+/* line 112, ../sass/style.sass */
+#header .block-superfish ul ul li.last {
+  border: none;
+}
+/* line 114, ../sass/style.sass */
+#header .block-superfish ul ul li a {
+  padding: 7px 8px;
+  background: #ffecd8;
+}
+/* line 117, ../sass/style.sass */
+#header .block-superfish ul ul li a:hover {
+  text-decoration: none;
+}
+
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 83, ../sass/style.sass */
+/* line 125, ../sass/style.sass */
 body {
   font: 13px/1.5 "OpenSansRegular", verdana, arial, helvetica, sans-serif;
   color: #555555;
 }
 
-/* line 87, ../sass/style.sass */
+/* line 129, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -95,23 +152,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   margin: 0.5em 0;
 }
 
-/* line 95, ../sass/style.sass */
+/* line 137, ../sass/style.sass */
 h1 {
   font-size: 2.2em;
 }
 
-/* line 98, ../sass/style.sass */
+/* line 140, ../sass/style.sass */
 h2 {
   font-size: 1.8em;
 }
 
 /*Links, Taxonomy etc */
-/* line 102, ../sass/style.sass */
+/* line 144, ../sass/style.sass */
 a {
   color: #4882b5;
   text-decoration: none;
 }
-/* line 105, ../sass/style.sass */
+/* line 147, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
@@ -119,23 +176,23 @@ a:hover, a:active {
 /*-------------------------------- */
 /*Nodeblocks, Topic Overview Pages */
 /*-------------------------------- */
-/* line 112, ../sass/style.sass */
+/* line 154, ../sass/style.sass */
 .block-nodeblock {
   float: left;
   width: 46%;
   margin-right: 4%;
   overflow: hidden;
 }
-/* line 117, ../sass/style.sass */
+/* line 159, ../sass/style.sass */
 .block-nodeblock.one-fourth {
   width: 21%;
 }
-/* line 119, ../sass/style.sass */
+/* line 161, ../sass/style.sass */
 .block-nodeblock.one-third {
   width: 29%;
 }
 
-/* line 125, ../sass/style.sass */
+/* line 165, ../sass/style.sass */
 #content-bottom-upper,
 #content-bottom-lower {
   margin-right: -4%;

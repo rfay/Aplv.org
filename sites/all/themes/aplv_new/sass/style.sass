@@ -15,9 +15,12 @@ $body-base-font-color: #555
 $headline-color: #EA9C44
 $secondary-color: #4882B5
 $middle-grey: #aaa
+$light-orange: #FFECD8
 
 // Font Properties
 $font-size-base: 13px
+$font-size-plus-one: 1.1em
+$font-size-plus-two: 1.2em
 $font-letter-spacing-base: 0.01em
 $font-size-h1: 2.2em
 $font-size-h2: 1.8em
@@ -56,6 +59,10 @@ table
   padding-top: 20px
   margin-bottom: 20px
 
+#name-and-slogan
+  float: left
+  width: 335px
+
 #site-name
   font-family: $font-family-headlines
   font-size: 3em
@@ -76,6 +83,41 @@ a#logo
   width: 25%
   margin-top: 10px
   text-align: right
+
+#header
+  .block-superfish
+    float: right
+    padding-top: 25px
+    ul 
+      li
+        margin: 0 9px 
+        &.last
+          margin-right: 0
+        &.first
+          margin-left: 0
+        a 
+          text-transform: uppercase
+          color: #333
+          font-size: $font-size-plus-one
+      ul
+        background: white
+        border: 1px solid #c5c5c5
+        top: 25px
+        left: -8px
+        padding: 0
+        li
+          padding: 0
+          margin: 0
+          border-bottom: 1px solid #c5c5c5
+          &.last 
+            border: none
+          a
+            padding: 7px 8px
+            background: $light-orange
+            &:hover
+              text-decoration: none
+
+  
 
 /*--------------------------------*/
 /*---- Fonts, Micro-Elements -----*/
@@ -118,8 +160,6 @@ a
     width: 21%  
   &.one-third
     width: 29%
- 
-
 
 
 #content-bottom-upper,
