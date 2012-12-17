@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Redesign Menus feature.
+ */
+
+include_once 'redesign_menus.features.inc';
