@@ -100,6 +100,7 @@ a#logo
           color: #333
           font-size: $font-size-plus-one
       ul
+        display: none
         background: white
         border: 1px solid #c5c5c5
         top: 25px
@@ -157,14 +158,34 @@ a
   margin-right: 4%
   overflow: hidden
   &.one-fourth
-    width: 21%  
+    width: 21% 
+    img
+      max-width: 100%
+      height: auto 
   &.one-third
     width: 29%
+  .field-type-image
+    .field-items
+      .field-item 
+        max-height: 125px
+        overflow: hidden
 
 
 #content-bottom-upper,
 #content-bottom-lower
   margin-right: -4%
+
+/*--------------------------------*/
+/*---------- Front Page ----------*/
+/*--------------------------------*/
+
+// .page-node-229
+//   h1#page-title
+//     display: none
+
+#block-views-header-slideshow-block
+  clear: both
+  padding-top: 15px
   
 
 
