@@ -15,3 +15,14 @@ function redesign_base_and_theme_settings_enable() {
   db_query($sql);
   drupal_set_message('Set aplv_new as an enabled theme');
 }
+
+/**
+ * Add page_theme module settings so that new pages are themed with dev theme.
+ *
+ * This can be removed when the new theme goes live.
+ */
+function redesign_base_and_theme_settings_update_7100() {
+  module_enable('page_theme');
+  $sql = "INSERT INTO `page_theme` VALUES (1,'aplv_new','node/203\r\nnode/221\r\nnode/219\r\nnode/206\r\nnode/214\r\nnode/216\r\nnode/204\r\nnode/212\r\nnode/211\r\nnode/218\r\nnode/209\r\nnode/223\r\nnode/210\r\nnode/217\r\nnode/205\r\nnode/222\r\nnode/213\r\nnode/215\r\nnode/207\r\nnode/208\r\nnode/220\r\nnode/224\r\nnode/227\r\nnode/225\r\nnode/226\r\nnode/229',1,0)";
+  db_query($sql);
+}
