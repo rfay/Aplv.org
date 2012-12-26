@@ -199,11 +199,14 @@ a:hover, a:active {
 }
 /* line 169, ../sass/style.sass */
 .block-nodeblock .field-type-image .field-items .field-item {
-  max-height: 125px;
   overflow: hidden;
 }
+/* line 172, ../sass/style.sass */
+.block-nodeblock .field-type-image .field-items .field-item.odd {
+  display: none;
+}
 
-/* line 174, ../sass/style.sass */
+/* line 176, ../sass/style.sass */
 #content-bottom-upper,
 #content-bottom-lower {
   margin-right: -4%;
@@ -212,7 +215,7 @@ a:hover, a:active {
 /*-------------------------------- */
 /*---------- Front Page ---------- */
 /*-------------------------------- */
-/* line 186, ../sass/style.sass */
+/* line 188, ../sass/style.sass */
 #block-views-header-slideshow-block {
   clear: both;
   padding-top: 15px;
