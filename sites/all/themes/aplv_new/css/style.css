@@ -362,7 +362,7 @@ a:hover, a:active {
 }
 /* line 255, ../sass/style.sass */
 .block-nodeblock.one-fourth img {
-  max-width: 100%;
+  width: 202px;
   height: auto;
 }
 /* line 258, ../sass/style.sass */
