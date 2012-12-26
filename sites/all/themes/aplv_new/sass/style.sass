@@ -26,7 +26,7 @@ $white-headings: $white
 $font-size-base: 13px
 $font-size-plus-one: 1.1em
 $font-size-plus-two: 1.2em
-$font-letter-spacing-base: 0.01em
+//$font-letter-spacing-base: 0em
 $font-size-h1: 2.7em
 $font-size-h2: 2em
 $line-height-base: 1.5
@@ -45,10 +45,12 @@ $font-base-properties: #{$font-size-base}/#{$line-height-base} $font-family-copy
 html, body
   padding: 0 
   margin: 0
+  width: 100%
+  height: 100%
  
 body
   line-height: 1
-  letter-spacing: $font-letter-spacing-base
+  //letter-spacing: $font-letter-spacing-base
 
 table
   border-collapse: collapse
@@ -59,6 +61,11 @@ table
 /*--------------------------------*/
 #page-wrapper
   position: relative
+  min-height: 100%
+
+#page
+  padding-bottom: 90px
+  min-height: 100%
   
 #header
   +container
@@ -124,8 +131,11 @@ a#logo
   text-align: right
 
 #main-wrapper,
-.messages
+div.messages
   +container
+
+div.messages 
+  padding-left: 37px
 
 #title-wrapper 
   position: absolute
@@ -146,6 +156,10 @@ a#logo
     padding-bottom: 30px
 
 #footer
+  position: absolute
+  width: 100%
+  bottom: 0
+  height: 90px
   background: #333
   color: #aaa
   .region-footer
