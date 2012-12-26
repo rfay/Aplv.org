@@ -8,7 +8,7 @@ stylesheets[all][] = font_face/open_sans/stylesheet-sans.css
 stylesheets[all][] = css/style.css
 
 regions[header] = Header
-regions[flags] = Flags - Right of Title
+regions[flags] = Flags and Menu
 regions[help] = Help
 regions[highlighted] = Highlighted
 regions[content] = Content
