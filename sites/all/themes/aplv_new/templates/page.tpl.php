@@ -100,7 +100,7 @@
               <div id="site-name">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
               </div>
-              <div id="logo">
+              <div class="logo">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
                   <img src="<?php print url(path_to_theme() . '/images/logo-aplv.png'); ?>" alt="<?php print t('Home'); ?>" />
                  </a>
@@ -156,6 +156,7 @@
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 
+
       <?php if ($page['sidebar_first']): ?>
         <div id="sidebar-first" class="column sidebar"><div class="section">
           <?php print render($page['sidebar_first']); ?>
@@ -174,4 +175,4 @@
       <?php print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
 
-  </div></div> <!-- /#page, /#page-wrapper -->
+  </div></div> <!-- /#page, /#page-wrapper --> 

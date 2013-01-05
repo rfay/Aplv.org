@@ -435,3 +435,13 @@ a.colorbox > .imagecache .image-caption {
   padding: 2px 10px 6px;
   font-size: 0.93em;
 }
+
+/* line 313, ../sass/style.sass */
+.clearleft {
+  clear: left;
+}
+
+/* line 316, ../sass/style.sass */
+.clearright {
+  clear: right;
+}
