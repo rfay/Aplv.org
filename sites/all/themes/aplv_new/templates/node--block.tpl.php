@@ -80,9 +80,18 @@
  * @ingroup themeable
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php print $user_picture; ?>
+<?php
+  // I'm sure this should not be done here, but this changes the image to be a
+  // link to the node. Suggestions of a better way?
+  $link = "";
+  if (!empty($field_title_link['und'][0]['value'])) {
+    $link = $field_title_link['und'][0]['value'];
+    $content['field_primary_image']['#prefix'] = "<a href='$link'>";
+    $content['field_primary_image']['#suffix'] = '</a>';
+  }
+?>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
   <?php print render($title_suffix); ?>
