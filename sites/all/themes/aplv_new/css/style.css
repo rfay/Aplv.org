@@ -275,15 +275,14 @@ div.messages {
 
 /* line 200, ../sass/style.sass */
 #footer {
-  position: absolute;
-  width: 100%;
   bottom: 0;
   height: 60px;
-  background: #444444;
-  color: #aaaaaa;
+  margin: 0 -5px;
+  background: #777777;
+  color: #dddddd;
   font-size: 0.83em;
 }
-/* line 208, ../sass/style.sass */
+/* line 207, ../sass/style.sass */
 #footer .region-footer {
   *zoom: 1;
   max-width: 926px;
@@ -292,7 +291,7 @@ div.messages {
   padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 0;
+  padding: 21px 20px;
 }
 /* line 38, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #footer .region-footer:after {
@@ -300,17 +299,21 @@ div.messages {
   display: table;
   clear: both;
 }
+/* line 210, ../sass/style.sass */
+#footer .region-footer p {
+  margin: 0;
+}
 
 /*-------------------------------- */
 /*---- Fonts, Micro-Elements ----- */
 /*-------------------------------- */
-/* line 216, ../sass/style.sass */
+/* line 217, ../sass/style.sass */
 body {
   font: 13px/1.5 "OpenSansRegular", verdana, arial, helvetica, sans-serif;
   color: #555555;
 }
 
-/* line 220, ../sass/style.sass */
+/* line 221, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: "PTSansNarrowRegular", "trebuchet ms", arial, helvetica, sans-serif;
@@ -320,73 +323,73 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   margin: 0.5em 0;
 }
 
-/* line 228, ../sass/style.sass */
+/* line 229, ../sass/style.sass */
 h1 {
   font-size: 2.7em;
 }
 
-/* line 231, ../sass/style.sass */
+/* line 232, ../sass/style.sass */
 h2 {
   font-size: 2em;
 }
 
 /*Links, Taxonomy etc */
-/* line 235, ../sass/style.sass */
+/* line 236, ../sass/style.sass */
 a {
   color: #4c86ce;
   text-decoration: none;
 }
-/* line 238, ../sass/style.sass */
+/* line 239, ../sass/style.sass */
 a:hover, a:active {
   text-decoration: underline;
 }
 
-/* line 241, ../sass/style.sass */
+/* line 242, ../sass/style.sass */
 #footer a {
-  color: #bbbbbb;
+  color: #dddddd;
 }
 
 /*-------------------------------- */
 /*Nodeblocks, Topic Overview Pages */
 /*-------------------------------- */
-/* line 248, ../sass/style.sass */
+/* line 249, ../sass/style.sass */
 .block-nodeblock {
   float: left;
   width: 46%;
   margin-right: 4%;
   overflow: hidden;
 }
-/* line 253, ../sass/style.sass */
+/* line 254, ../sass/style.sass */
 .block-nodeblock.one-fourth {
   width: 21%;
 }
-/* line 255, ../sass/style.sass */
+/* line 256, ../sass/style.sass */
 .block-nodeblock.one-fourth img {
   width: 202px;
   height: auto;
 }
-/* line 258, ../sass/style.sass */
+/* line 259, ../sass/style.sass */
 .block-nodeblock.one-third {
   width: 29%;
 }
-/* line 260, ../sass/style.sass */
+/* line 261, ../sass/style.sass */
 .block-nodeblock h2 {
   margin-bottom: 17px;
 }
-/* line 264, ../sass/style.sass */
+/* line 265, ../sass/style.sass */
 .block-nodeblock .field-type-image .field-items .field-item {
   overflow: hidden;
 }
-/* line 267, ../sass/style.sass */
+/* line 268, ../sass/style.sass */
 .block-nodeblock .field-type-image .field-items .field-item.odd {
   display: none;
 }
-/* line 269, ../sass/style.sass */
+/* line 270, ../sass/style.sass */
 .block-nodeblock .field-type-image .field-items img {
   border: 1px solid #e5e5e5;
 }
 
-/* line 273, ../sass/style.sass */
+/* line 274, ../sass/style.sass */
 #content-bottom-upper,
 #content-bottom-lower {
   margin-right: -4%;
@@ -395,12 +398,12 @@ a:hover, a:active {
 /*-------------------------------- */
 /*---------- Front Page ---------- */
 /*-------------------------------- */
-/* line 285, ../sass/style.sass */
+/* line 286, ../sass/style.sass */
 #block-views-header-slideshow-block {
   clear: both;
   padding-top: 22px;
 }
-/* line 289, ../sass/style.sass */
+/* line 290, ../sass/style.sass */
 #block-views-header-slideshow-block .field-content img {
   border: 1px solid #dddddd;
 }
@@ -408,19 +411,19 @@ a:hover, a:active {
 /*-------------------------------- */
 /*---------- Other micro-elements ---------- */
 /*-------------------------------- */
-/* line 297, ../sass/style.sass */
+/* line 298, ../sass/style.sass */
 a.colorbox .image-caption-container,
 a.colorbox > .imagecache {
   border: 1px solid #bbbbbb !important;
   padding: 0 !important;
   margin-left: 25px !important;
 }
-/* line 302, ../sass/style.sass */
+/* line 303, ../sass/style.sass */
 a.colorbox .image-caption-container.image-caption-container-right,
 a.colorbox > .imagecache.image-caption-container-right {
   margin-left: 25px;
 }
-/* line 304, ../sass/style.sass */
+/* line 305, ../sass/style.sass */
 a.colorbox .image-caption-container img.floatright,
 a.colorbox .image-caption-container img.imagecache,
 a.colorbox > .imagecache img.floatright,
@@ -428,7 +431,7 @@ a.colorbox > .imagecache img.imagecache {
   float: none;
   border-bottom: 1px solid #dddddd;
 }
-/* line 308, ../sass/style.sass */
+/* line 309, ../sass/style.sass */
 a.colorbox .image-caption-container .image-caption,
 a.colorbox > .imagecache .image-caption {
   display: block;
@@ -436,12 +439,12 @@ a.colorbox > .imagecache .image-caption {
   font-size: 0.93em;
 }
 
-/* line 313, ../sass/style.sass */
+/* line 314, ../sass/style.sass */
 .clearleft {
   clear: left;
 }
 
-/* line 316, ../sass/style.sass */
+/* line 317, ../sass/style.sass */
 .clearright {
   clear: right;
 }
