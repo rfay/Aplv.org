@@ -33,7 +33,7 @@ function header_slideshow_context_default_contexts() {
           'module' => 'views',
           'delta' => 'header_slideshow-block',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '10',
         ),
       ),
     ),

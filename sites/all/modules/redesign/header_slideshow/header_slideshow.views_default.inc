@@ -67,6 +67,16 @@ function header_slideshow_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['label'] = 'Header Slideshow Queue';
+  $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'header_slideshow' => 'header_slideshow',
+  );
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_slideshow_image']['id'] = 'field_slideshow_image';
   $handler->display->display_options['fields']['field_slideshow_image']['table'] = 'field_data_field_slideshow_image';
@@ -78,6 +88,13 @@ function header_slideshow_views_default_views() {
     'image_style' => 'header_slideshow',
     'image_link' => '',
   );
+  $handler->display->display_options['fields']['field_slideshow_image']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_slideshow_image']['delta_offset'] = '0';
+  /* Sort criterion: Nodequeue: Position */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -110,6 +127,7 @@ function header_slideshow_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Header Slideshow Queue'),
     t('Block'),
   );
   $export['header_slideshow'] = $view;

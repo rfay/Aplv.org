@@ -26,6 +26,39 @@ function header_slideshow_views_api() {
 }
 
 /**
+ * Implements hook_fe_nodequeue_export_fields().
+ */
+function header_slideshow_fe_nodequeue_export_fields() {
+  $nodequeues = array();
+
+  // Exported nodequeues: header_slideshow
+  $nodequeues['header_slideshow'] = array(
+    'qid' => '1',
+    'name' => 'header_slideshow',
+    'title' => 'Header Slideshow',
+    'subqueue_title' => '',
+    'size' => '0',
+    'link' => '',
+    'link_remove' => '',
+    'owner' => 'nodequeue',
+    'show_in_ui' => '1',
+    'show_in_tab' => '1',
+    'show_in_links' => '0',
+    'reference' => '0',
+    'reverse' => '0',
+    'i18n' => '0',
+    'subqueues' => '1',
+    'types' => array(
+      0 => 'header_slideshow',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  return $nodequeues;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function header_slideshow_image_default_styles() {

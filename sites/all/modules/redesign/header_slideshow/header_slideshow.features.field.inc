@@ -14,7 +14,7 @@ function header_slideshow_field_default_fields() {
   $fields['node-header_slideshow-field_slideshow_image'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_slideshow_image',
@@ -90,6 +90,7 @@ function header_slideshow_field_default_fields() {
             'document' => 0,
             'image' => 'image',
             'video' => 0,
+            0 => 0,
           ),
           'browser_plugins' => array(
             'media_default--media_browser_1' => 0,
