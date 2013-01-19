@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Redesign Media Image sizes feature.
+ */
+
+include_once 'redesign_image_sizes.features.inc';

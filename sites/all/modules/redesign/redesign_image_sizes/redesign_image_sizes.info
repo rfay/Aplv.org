@@ -1,0 +1,10 @@
+name = Redesign Media Image sizes
+core = 7.x
+package = Redesign
+dependencies[] = ctools
+dependencies[] = file_entity
+dependencies[] = media
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = entity_view_modes

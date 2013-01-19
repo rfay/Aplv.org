@@ -401,6 +401,33 @@ a:hover, a:active {
   margin-right: -4%;
 }
 
+/* line 284, ../sass/style.sass */
+.front #main #content {
+  padding-bottom: 0;
+}
+/* line 286, ../sass/style.sass */
+.front #content-bottom-lower {
+  background: #dddddd;
+  margin: 40px -5px 0;
+  padding: 20px;
+}
+/* line 290, ../sass/style.sass */
+.front #content-bottom-lower h2 {
+  margin: 0 0 7px;
+}
+/* line 292, ../sass/style.sass */
+.front #content-bottom-lower p {
+  margin: 0 0 10px;
+}
+/* line 295, ../sass/style.sass */
+.front #content-bottom-lower .intro-video h2 {
+  margin-bottom: 13px;
+}
+/* line 299, ../sass/style.sass */
+.front #content-bottom-lower .donate img {
+  width: auto;
+}
+
 /*-------------------------------- */
 /*---------- Front Page ---------- */
 /*-------------------------------- */
