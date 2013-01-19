@@ -12,7 +12,6 @@ dependencies[] = nodeblock
 dependencies[] = redesign_block
 dependencies[] = strongarm
 dependencies[] = superfish
-dependencies[] = page_theme
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = site_name
