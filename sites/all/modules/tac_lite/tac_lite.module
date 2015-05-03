@@ -12,16 +12,27 @@
 function tac_lite_help($section) {
   switch ($section) {
     case 'admin/help#tac_lite':
-      $output = '<p>' . t('This module allows you to restrict access to site content. It uses a simple scheme based on Taxonomy, Users and Roles. It uses the node_access table and other features built into Drupal to hide content from unauthorized users.') . '</p>';
-      $output .= '<p>' . t('While this module has been designed to be as simple as possible to use, there are several steps required to set it up.') . '</p>';
+      // $output .= '<p>' . t('') . '</p>';
+      $output = '<p>' . t('Taxonomy Access Control Lite allows you to restrict access to site content. It uses a simple scheme based on Taxonomy, Users and Roles.') . '</p>';
+      $output .= '<p>' . t('This module leverages Drupal\'s node_access table allows this module to grant permission to view, update, and delete nodes.  To control which users can <em>create</em> new nodes, use Drupal\'s role based permissions.') . '</p>';
+      $output .= '<p>' . t('It is important to understand that this module <em>grants</em> privileges, as opposed to <em>revoking</em> privileges.  So, use Drupal\'s built-in permissions to hide content from certain roles, then use this module to show the content.  This module cannot hide content that the user is allowed to see based on their existing privileges.') . '</p>';
+$output .= '<p>' . t('There are several steps required to set up Taxonomy Access Control Lite.') . '</p>';
       $output .= '<ol>';
       $output .= '<li>' . t('Define one or more vocabularies whose terms will control which users have access. For example, you could define a vocabulary called \'Privacy\' with terms \'Public\' and \'Private\'.') . '</li>';
-      $output .= '<li>' . t('Tell this module which vocabulary or vocabularies control privacy. (!link)', array('!link' => l(t('administer -> access control -> tac_lite'), 'admin/user/access/tac_lite'))) . '</li>';
-      $output .= '<li>' . t('Grant access to users based on their roles (!link), and/or...', array('!link' => l(t('administer -> access control -> tac_lite -> by role'), 'admin/user/access/tac_lite/roles'))) . '</li>';
-      $output .= '<li>' . t('Grant access to individual users. (See the taxonomy-based access tab under user -> edit.)') . '</li>';
-      $output .= '<li>' . t('Finally, if your site contains content, you will need to re-save all nodes. This ensures that Drupal\'s node_access table is up-to-date. Otherwise, content submitted before this module was configured will be hidden.') . '</li>';
+      $output .= '<li>' . t('Tell this module which vocabularies control privacy. (!link)', array('!link' => l(t('administer -> people -> access control by taxonomy'), 'admin/people/access/tac_lite'))) . '</li>';
+      $output .= '<li>' . t('Configure one or more <em>schemes</em>.   simple site may need only one scheme which grants view permission.  A more complex site might require additional schemes for update and delete.  Each scheme associates roles and terms.  Users will be granted priviliges based on their role and the terms with which nodes are tagged.') . '</li>';
+      $output .= '<li>' . t('When settings are correct, <a href=!url>rebuild node_access permissions</a>.', array(
+                   '!url' => url('admin/reports/status/rebuild'),
+                 )) . '</li>';
+      $output .= '<li>' . t('Optionally, grant access to individual users. (See the <em>access by taxonomy</em> tab, under user -> edit.)') . '</li>';
       $output .= '</ol>';
-      $output .= '<p>' . t('Currently, this module works with view grants only (no update or delete grants).') . '</p>';
+      $output .= '<p>' . t('Troubleshooting:.') . '<ul>';
+      $output .= '<li>' . t('Try rebuilding node_access permissions.') . '</li>';
+      $output .= '<li>' . t('Try disabling tac_lite.module, rebuilding permissions.  With the module disabled, users should not have the privileges you are attempting to grant with this module.') . '</li>';
+      $output .= '<li>' . t('The devel_node_access.module (part of <a href=!url>devel</a>) helps to see exactly what Drupal\'s node_access table is doing.', array(
+                   '!url' => 'http://drupal.org/project/devel',
+                 )) . '</li>';
+      $output .= '</ul></p>';
       return $output;
       break;
   }
@@ -197,6 +208,7 @@ function _tac_lite_config($scheme) {
   // Merge defaults, for backward compatibility.
   $config += array(
     'term_visibility' => (isset($config['perms']['grant_view']) && $config['perms']['grant_view']),
+    'unpublished' => FALSE,
   );
 
   // For backward compatability, use naming convention for scheme 1
@@ -242,6 +254,13 @@ function tac_lite_admin_scheme_form($form, $form_state, $i) {
       '#default_value' => $config['perms'],
       '#description' => t('Select which permissions are granted by this scheme.  <br/>Note when granting update, it is best to enable visibility on all terms.  Otherwise a user may unknowingly remove invisible terms while editing a node.'),
       '#required' => FALSE,
+    );
+
+    $form['tac_lite_config_scheme_' . $i]['unpublished'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Apply to unpublished content'),
+      '#description' => t('If checked, permissions in this scheme will apply to unpublished content.  If this scheme includes the view permission, then <strong>unpublished nodes will be visible</strong> to users whose roles would grant them access to the published node.'),
+      '#default_value' => $config['unpublished'],
     );
 
     $form['tac_lite_config_scheme_' . $i]['term_visibility'] = array(
@@ -457,19 +476,22 @@ function tac_lite_node_access_records($node) {
     $grants = array();
     for ($i = 1; $i <= variable_get('tac_lite_schemes', 1); $i++) {
       $config = _tac_lite_config($i);
-      foreach ($tids as $tid) {
-        $grant = array(
-          'realm' => $config['realm'],
-          'gid' => $tid, // use term id as grant id
-          'grant_view' => 0,
-          'grant_update' => 0,
-          'grant_delete' => 0,
-          'priority' => 0,
-        );
-        foreach ($config['perms'] as $perm) {
-          $grant[$perm] = TRUE;
+      // Only apply grants to published nodes, or unpublished nodes if requested in the scheme
+      if ($node->status || $config['unpublished']) {
+        foreach ($tids as $tid) {
+          $grant = array(
+            'realm' => $config['realm'],
+            'gid' => $tid, // use term id as grant id
+            'grant_view' => 0,
+            'grant_update' => 0,
+            'grant_delete' => 0,
+            'priority' => 0,
+          );
+          foreach ($config['perms'] as $perm) {
+            $grant[$perm] = TRUE;
+          }
+          $grants[] = $grant;
         }
-        $grants[] = $grant;
       }
     }
     return $grants;
@@ -487,10 +509,26 @@ function tac_lite_node_access_records($node) {
 function _tac_lite_get_terms($node) {
   $tids = array();
 
-  // Get the vids that tac_lite cares about
+  // Get the vids that tac_lite cares about.
   $vids = variable_get('tac_lite_categories', NULL);
   if ($vids) {
-    // Query for all tids assigned to this node in the vids that we care about
+    // Load all terms found in term reference fields.
+    // This logic should work for all nodes (published or not).
+    $terms_by_vid = tac_lite_node_get_terms($node);
+    if (!empty($terms_by_vid)) {
+      foreach ($vids as $vid) {
+        if (!empty($terms_by_vid[$vid])) {
+          foreach ($terms_by_vid[$vid] as $tid => $term) {
+            $tids[$tid] = $tid;
+          }
+        }
+      }
+    }
+
+    // The logic above should have all terms already, but just in case we use
+    // the "original" logic below.  The taxonomy module stopped writing to the
+    // taxonomy_index for unpublished nodes, so this works only for published
+    // nodes.
     $query = db_select('taxonomy_index', 'r');
     $t_alias = $query->join('taxonomy_term_data', 't', 'r.tid = t.tid');
     $v_alias = $query->join('taxonomy_vocabulary', 'v', 't.vid = v.vid');
@@ -499,6 +537,13 @@ function _tac_lite_get_terms($node) {
     $query->condition("t.vid", $vids, 'IN');
     $result = $query->execute();
     foreach ($result as $term) {
+      if (empty($tids[$term->tid])) {
+        watchdog('tac_lite', 'Unexpected term id %tid associated with !node.  Please report this to !url.', array(
+            '%tid' => $term->tid,
+            '!node' => l($node->title, 'node/' . $node->nid),
+            '!url' => 'https://drupal.org/node/1918272',
+          ), WATCHDOG_DEBUG);
+      }
       $tids[$term->tid] = $term->tid;
     }
   }
@@ -513,18 +558,41 @@ function _tac_lite_get_terms($node) {
 }
 
 /**
- * Is this used? It will need the same updates as _tac_lite_get_terms
- * @param unknown_type $nid
+ * In Drupal 6.x, there was taxonomy_node_get_terms().  Drupal 7.x should
+ * provide the same feature, but doesn't.  Here is our workaround, based on
+ * https://drupal.org/comment/5573176#comment-5573176.
+ *
+ * We organize our data structure by vid and tid.
  */
-function _tac_lite_get_terms_by_nid($nid) {
-  $tids = array();
-  $terms = taxonomy_node_get_terms($nid);
+function tac_lite_node_get_terms($node) {
+  $terms = &drupal_static(__FUNCTION__);
 
-  // terms is now an array of objects. We convert to a simple array of tids
-  foreach ($terms as $term) {
-    $tids[$term->tid] = $term->tid;
+  if (!isset($terms[$node->nid])) {
+    // Get tids from all taxonomy_term_reference fields.
+    $fields = field_info_fields();
+    foreach ($fields as $field_name => $field) {
+      // Our goal is to get all terms, regardless of language, associated with the node.  Does the code below do that?
+      if ($field['type'] == 'taxonomy_term_reference' && field_info_instance('node', $field_name, $node->type)) {
+        if (($items = field_get_items('node', $node, $field_name)) && is_array($items)) {
+          foreach ($items as $item) {
+            // Sometimes $item contains only tid, sometimes entire term.  Thanks Drupal for remaining mysterious!
+            // We need to term to determine the vocabulary id.
+            if (!empty($item['taxonomy_term'])) {
+              $term = $item['taxonomy_term'];
+            }
+            else {
+              $term = taxonomy_term_load($item['tid']);
+            }
+            if ($term) {
+              $terms[$node->nid][$term->vid][$term->tid] = $term;
+            }
+          }
+        }
+      }
+    }
   }
-  return $tids;
+
+  return isset($terms[$node->nid]) ? $terms[$node->nid] : FALSE;
 }
 
 /**
