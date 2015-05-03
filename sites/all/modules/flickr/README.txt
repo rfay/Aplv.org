@@ -24,6 +24,8 @@ corresponding Flickr page.
 
 INSTALLATION AND CONFIGURATION
 ==============================
+It is recommended to enable both the Taxonomy (core) and Colorbox module prior
+to installation of the Flickr module. This avoids some manual configuration.
 1.) Extract the download package in the '/sites/all/modules directory'.
 2.) Enable the module in 'admin/modules'.
 3.) Configure the API Key and settings at '/admin/config/media/flickr'.
@@ -212,6 +214,12 @@ sizes make navigating to next and previous pictures slower. TAKE CARE, n (320px)
 and c (800px) sizes are missing on many "older" Flickr images!
 Defaults to -: 500 px on longest side.
 
+Additionally: Enable playing videos within Colorbox
+--------------------------------------------------
+- Go to '/admin/config/media/colorbox'.
+- Select the checkbox 'Enable Colorbox inline' and 'Save configuration'.
+- Clear your site cache (https://drupal.org/node/42055).
+
 BLOCK SETTINGS (field group)
 --------------------------------------
 Only if the submodule Flickr Block is enabled.
@@ -251,8 +259,6 @@ RECOMMENDED
 ===========
 If you use the Flickr Filter submodule, you might find the AutoFloat
 module useful. See https://drupal.org/project/autofloat
-
-Flickr module Style Guide. See https://drupal.org/node/2174131
 
 TROUBLESHOOTING
 ===============
