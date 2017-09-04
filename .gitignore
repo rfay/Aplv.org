@@ -1,7 +1,9 @@
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
+docroot/sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
-files
+docroot/sites/*/files
+docroot/sites/*/private
+docroot/files
+
+.tarballs
