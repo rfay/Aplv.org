@@ -15,7 +15,7 @@ provider: default
 hooks:
   post-import-db:
   - exec: drush cc all
-  - exec: drush vdel locale_language_negotiation_url_part
+  - exec: drush vdel --yes --exact locale_language_negotiation_url_part
   - exec: drush vset file_private_path /tmp
   - exec: drush uli
 use_dns_when_possible: true
