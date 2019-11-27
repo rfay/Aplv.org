@@ -1,4 +1,4 @@
-APIVersion: v1.12.0-alpha2-18-gba9e5db9-dirty
+APIVersion: v1.12.0-rc1
 name: aplv
 type: drupal7
 docroot: docroot
