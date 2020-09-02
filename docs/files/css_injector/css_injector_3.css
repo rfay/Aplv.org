@@ -1,0 +1,38 @@
+/* Flickr posts - div style flickrfloat */
+div.flickr,div.flickrfloat {
+margin-left: 10px;
+margin-bottom: 10px;
+}
+
+div.flickrfloat {
+float: right;
+}
+
+div.flickr-img-wrapper img,objectwrapper {
+  border: solid 2px black;
+}
+
+.flickr-img-wrapper {
+ display: inline;
+}
+/*
+div.flickr img,objectwrapper {
+border: solid 2px black;
+}
+*/
+.flickr-img-wrapper {
+ /* display:inline; */
+}
+
+.caption {
+  font-style: italic;
+}
+
+/* If the parent div has hide-generated caption... hide caption */
+.hide-generated-caption .generated-caption {
+ display:none;
+}
+
+div.caption {
+width: 240px;
+}

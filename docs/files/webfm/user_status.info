@@ -1,0 +1,9 @@
+; $Id: user_status.info,v 1.1 2007/01/16 06:34:04 dww Exp $
+name = Extended user status notifications
+description = Provides configurable email notifications when users are set to active, blocked, or deleted.
+version = "$Name: DRUPAL-5--1-1 $"
+
+; Information added by drupal.org packaging script on 2007-03-30
+version = "5.x-1.1"
+project = "user_status"
+

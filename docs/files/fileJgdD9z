@@ -1,0 +1,64 @@
+/* Added to original by rfay */
+/*
+div.langswitcher {
+    text-align:right;
+    position: absolute;
+    left: 210px;
+    top: 0pt;
+}
+*/
+
+.langswitcher li {
+  display: inline;
+}
+
+/*-- For floating images in a div and putting img border --*/
+div.imgfloat {
+        float:right;
+        margin-bottom:10px;
+        margin-left:10px;
+}
+div.imgfloat img, objectwrapper  {
+        border:2px solid black;
+}
+div.imgfloat .caption {
+        width: 200px;
+        font-style: italic;
+
+}
+
+/* -- To theme gmap -- */
+.gmap-map {
+  border: 2px solid grey;
+}
+
+.gmap-popup.latitude,
+.gmap-popup.longitude
+{
+display: none;
+}
+
+.gmap-popup.field_number_of_individuals_ser_value:before {
+  content: "Individuals Served: ";
+}
+.gmap-popup.field_date_completed_value:before {
+  content: "Date Completed: ";
+}
+
+
+/* -- Theming for donations by project view -- */
+.view-DonationsByProject {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.view-header-DonationsByProject {
+  font-weight:bold;
+  font-size:large;
+}
+.view-empty-DonationsByProject {
+  font-style:italic;
+
+  font-size:large;
+}
+
+
