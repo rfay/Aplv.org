@@ -1,0 +1,4 @@
+/* hide breadcrumbs */
+div.breadcrumb { 
+  display: none;
+}

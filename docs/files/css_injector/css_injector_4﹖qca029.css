@@ -1,0 +1,29 @@
+/* 300w-floatright images */
+a.colorbox {
+clear: both;
+}
+a.colorbox .image-caption-container{
+margin-left: 10px;
+margin-bottom: 10px;
+float: right;
+clear: right;
+border: solid 2px black;
+padding: 2px;
+width: 300px;
+text-align: center;
+}
+
+a.colorbox > .imagecache {
+margin-left: 10px;
+margin-bottom: 10px;
+clear: right;
+float: right;
+border: solid 2px black;
+padding: 2px;
+text-align: center;
+}
+
+img.imagecache-300w-floatright {
+float: right;
+clear: right;
+}
